@@ -1,0 +1,44 @@
+\mode<presentation>
+
+\pgfdeclareimage[width=\paperwidth]{titleSlide}{scidac-ornlTitleSlide}
+\pgfdeclareimage[width=\paperwidth]{contentSlide}{ornlContentSlide}
+
+\setbeamertemplate{items}[circle]
+\setbeamertemplate{sections/subsections in toc}[circle]
+
+\setbeamertemplate{background}{
+    \ifnum\thepage>1\relax%
+        \pgfuseimage{contentSlide}
+    \else
+        \pgfuseimage{titleSlide}
+    \fi
+}
+
+% Title page
+\defbeamertemplate*{title page}{ORNLofficial}[1][]{ 
+    \vskip-1cm
+    \begin{beamercolorbox}[wd=12cm,rightskip=6cm,sep=8pt,#1]{title page header}
+        \usebeamerfont{title}\inserttitle\par%
+    \end{beamercolorbox}%
+    
+    \vskip1cm%
+    \begin{beamercolorbox}[wd=12cm,rightskip=7cm,#1]{author}
+        \usebeamerfont{author}\insertauthor%
+    \end{beamercolorbox}
+    
+    \vskip2cm%
+    \begin{beamercolorbox}[wd=12cm,rightskip=6cm,#1]{date}
+        \usebeamerfont{author}\insertdate%
+    \end{beamercolorbox}
+    
+    %\vfill
+}
+
+% Section page
+\defbeamertemplate*{section page}{ORNLofficial}[1][]{
+    \begin{beamercolorbox}[wd=12cm,rightskip=6cm,sep=12pt]{part title}
+        \usebeamerfont{section title}\insertsection\par
+    \end{beamercolorbox}
+}
+
+\mode<all>

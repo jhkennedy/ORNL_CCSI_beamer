@@ -1,0 +1,33 @@
+\mode<presentation>
+
+% Requirement
+\RequirePackage{tikz}
+\RequirePackage{graphicx}
+
+% Settings
+\usefonttheme{structurebold}
+
+\useinnertheme{ORNLofficial}
+\useoutertheme{ORNLofficial}
+\usecolortheme{ORNLofficial}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{blocks}[rounded][shadow=true]  
+
+\pgfdeclareimage[width=\paperwidth]{sectionSlide}{ornlSectionSlide}
+
+\newcommand{\sectionslide}{{
+    \setbeamertemplate{background}{
+        \pgfuseimage{sectionSlide}
+    }
+    \frame{\sectionpage}
+}}
+
+\newenvironment{sectionframe}[1]{
+    \setbeamertemplate{background}{\pgfuseimage{sectionSlide}}
+    \begin{frame}{#1}
+}{
+    \end{frame}
+}
+
+\mode<all>

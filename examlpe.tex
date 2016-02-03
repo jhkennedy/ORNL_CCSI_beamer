@@ -1,0 +1,73 @@
+\documentclass{beamer}
+\usetheme{ORNLofficial}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+% An environment to set an image to the background of the slide.
+% Usage example:
+%    \begin{backgroundframe}{FRAME_TITLE}{IMAGE_NAME}{height=\textheight}
+%
+%    \end{backgroundframe}
+% Typically, FRAME_TITLE will be empty.
+\newenvironment{backgroundframe}[3]{
+    \setbeamertemplate{background}{\includegraphics[#3]{#2}}
+    \begin{frame}{#1}
+}{
+    \end{frame}
+}
+
+
+\title{There Is No Largest Prime Number}
+\date[ISPN ’80]{27th International Symposium of Prime Numbers}
+\author[Euclid]{Euclid of Alexandria \\ \texttt{euclid@alexandria.edu}}
+
+
+\begin{document}
+    \begin{frame}
+        \titlepage
+    \end{frame}
+
+    \begin{sectionframe}{Overview.}
+        \tableofcontents
+    \end{sectionframe}
+
+
+    \begin{frame}{An AWESOME title.}
+        Hello.
+
+        \alert{OH GOD LOOKOUT!!!}
+
+        Just kidding.
+    \end{frame}
+
+    \section{A section.}
+    \sectionslide
+
+    \begin{frame}{Another title.}
+        Hello again.
+        \begin{itemize}
+            \item dog.
+            \item cat.
+            \item horse.
+                \begin{itemize}
+                    \item of course.
+            \end{itemize}
+        \end{itemize}
+    \end{frame}
+
+    \section{Another section.}
+    \sectionslide
+
+    \begin{frame}{Another title.}
+        Hello again.
+        \begin{itemize}
+            \item dog.
+            \item zebra.
+            \item horse.
+                \begin{itemize}
+                    \item of course.
+            \end{itemize}
+        \end{itemize}
+    \end{frame}
+\end{document}
